@@ -10,9 +10,9 @@ class MainTest {
     public void test() {
         int n = new java.util.Random().nextInt(50) + 50;
         String str =
-                IntStream.range(n, n + 10)
+                java.util.stream.IntStream.range(n, n + 10)
                         .mapToObj(i -> String.format("%c", i))
-                        .collect(Collectors.joining(""));
+                        .collect(java.util.stream.Collectors.joining(""));
         assertTrue(Main.isSymmetric(str + new StringBuilder(str).reverse().toString()));
         assertFalse(Main.isSymmetric(str + new StringBuilder(str).reverse().toString() + "111"));
     }
