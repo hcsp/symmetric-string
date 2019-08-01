@@ -1,7 +1,5 @@
 package com.github.hcsp.controlflow;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println(isSymmetric("1234"));
@@ -16,13 +14,5 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {
-        String[] positiveArr = str.split(""); // 用,分割
-        String[] reverseArr = new StringBuffer(str).reverse().toString().split("");
-        for (int i = 0; i < positiveArr.length; i++) {
-           if(!positiveArr[i].equals(reverseArr[i])) return false;
-        }
-        return true;
-
-    }
+    public static boolean isSymmetric(String str) {}
 }
