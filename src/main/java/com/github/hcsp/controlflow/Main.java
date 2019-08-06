@@ -14,5 +14,18 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {}
+    public static boolean isSymmetric(String str) {
+        char begin;
+        char end;
+        boolean res=true;
+        for (int i = 0; i < Math.floor(str.length()/2); i++) {
+            begin = str.charAt(i);
+            end = str.charAt(str.length()-1-i);
+            if (begin!=end){
+                res=false;
+                break;
+            }
+        }
+        return res;
+    }
 }
