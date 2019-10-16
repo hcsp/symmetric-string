@@ -14,15 +14,5 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-//    遍历一分为二的字符串，使用charAt()获取指定索引处的 char 值
-//    判断正反char是否相同
-    public static boolean isSymmetric(String str) {
-        int length = str.length();
-        for (int i = 0; i <= length/2 ; i++) {
-            if (str.charAt(i) != str.charAt(length - 1 - i)){
-                return false;
-            }
-        }
-        return true;
-    }
+    public static boolean isSymmetric(String str) {}
 }
