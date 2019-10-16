@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(isSymmetric("1234"));
         System.out.println(isSymmetric("1234321"));
-        System.out.println(isSymmetric("1235445321"));
     }
 
     /**
@@ -15,23 +14,5 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {
-
-        int len = str.length();
-        boolean flag = true;
-
-        for( int i = 0; i < len / 2; i++) {
-
-            char ch1 = str.charAt(i);
-            char ch2 = str.charAt(len - 1 - i);
-
-            if(ch1 != ch2) {
-                flag = false;
-                break;
-            }
-
-        }
-
-        return flag;
-    }
+    public static boolean isSymmetric(String str) {}
 }
