@@ -14,24 +14,5 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {
-        int length = str.length();
-        if(length == 0){
-            return true;
-        }
-        int subNum ;
-        subNum = length/2;
-        String frontString = str.substring(0,subNum);
-        String afterString;
-        if(length % 2 == 0) {
-            afterString = str.substring(subNum, length);
-        }else {
-            afterString = str.substring(subNum+1,length);
-        }
-        char[] chars = new char[afterString.length()];
-        for (int i = 0,afterStringLength = afterString.length(); i < afterStringLength; i++) {
-            chars[afterStringLength-i-1] = afterString.charAt(i);
-        }
-        return frontString.equals(String.copyValueOf(chars));
-    }
+    public static boolean isSymmetric(String str) {}
 }
