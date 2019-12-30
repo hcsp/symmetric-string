@@ -15,20 +15,20 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-        boolean flag = true;
-        int start = 0;
-        int end = str.length() - 1;
-
-        while (start <= end) {
-            if (str.charAt(start) != str.charAt(end)) {
-                flag = false;
-                break;
+        /*
+            再一次看了优秀答案后，发现大家是真的优秀
+            感觉就我，是零基础班里的零基础（手动捂脸）
+            居然就用一条语句就完成了我要用十多条语句的事情，而且还是重复造轮子
+            下面就参看非最优秀的答案（不用StringBuilder类），来修改答案
+         */
+        char[] chArr = str.toCharArray();
+        int length = chArr.length;
+        //用length/2,可以减少一半的运算，如果是对称字符串的话
+        for (int i = 0; i < length / 2; i++) {
+            if (chArr[i] != chArr[length - (i + 1)]) {
+                return false;
             }
-
-            start++;
-            end--;
         }
-
-        return flag;
+        return true;
     }
 }
