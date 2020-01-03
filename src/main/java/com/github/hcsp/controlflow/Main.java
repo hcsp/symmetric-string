@@ -14,5 +14,30 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {}
+    public static boolean isSymmetric(String str) {
+        int match = 0;//初始化 配对数
+        //字符串长度为奇数
+        if (str.length() % 2 == 1) {
+            for (int i = 0; i < (str.length() - 1) / 2; i++) {
+                if (str.charAt(i) == str.charAt(str.length() - 1 - i)) {
+                    match++;
+                }
+            }
+            return match == (str.length() - 1) / 2;
+        }
+        //字符串长度为偶数
+        else if (str.length() % 2 == 0) {
+            for (int i = 0; i < str.length() / 2; i++) {
+                if (str.charAt(i) == str.charAt(str.length() - 1 - i)) {
+                    match++;
+                }
+            }
+            return match == str.length() / 2;
+        }
+        //字符串为null或者其他
+        else {
+            System.out.println("输入无效字符或为null");
+            return false;
+        }
+    }
 }
