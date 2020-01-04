@@ -28,7 +28,7 @@ public class Main {
  * StringBuffer.reverse 颠倒反转字符
  */
 
-        StringBuffer str1 = new StringBuffer(str);
+        StringBuilder str1 = new StringBuilder(str);
         str1.reverse();
         if (str.contentEquals(str1)) {
             return true;
