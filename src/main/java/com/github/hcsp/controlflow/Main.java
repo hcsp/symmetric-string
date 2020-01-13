@@ -16,6 +16,6 @@ public class Main {
      */
     public static boolean isSymmetric(String str) {
         String reverse = new StringBuffer(str).reverse().toString();
-        return str.equals(reverse) ? true : false;
+        return str.equals(reverse);
     }
 }
