@@ -15,10 +15,10 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-        StringBuilder reverse = new StringBuilder();
-        for (int i = str.length() - 1; i >= 0; i--) {
-            reverse.append(str.charAt(i));
-        }
+        StringBuilder reverse = new StringBuilder(str).reverse();
+//        for (int i = str.length() - 1; i >= 0; i--) {
+//            reverse.append(str.charAt(i));
+//        }
         System.out.println(str);
         System.out.println(reverse);
         return reverse.toString().equals(str);
