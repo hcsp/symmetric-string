@@ -21,7 +21,7 @@ public class Main {
     public static boolean isSymmetric(String str) {
        StringBuilder oldStr =new StringBuilder(str);
        String newStr = oldStr.reverse().toString();
-       return str.equals(newStr);  //这里为什么不能oldStr.equals(newStr)
+       return str.equals(newStr);
 
         }
     }
