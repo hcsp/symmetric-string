@@ -1,8 +1,9 @@
 package com.github.hcsp.controlflow;
 
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(isSymmetric("1234"));
+
         System.out.println(isSymmetric("1234321"));
     }
 
@@ -14,5 +15,11 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {}
+    public static boolean isSymmetric(String str) {
+        StringBuilder oldStr = new StringBuilder(str);
+        String newStr = oldStr.reverse().toString();
+        return str.equals(newStr);
+
+    }
 }
+
