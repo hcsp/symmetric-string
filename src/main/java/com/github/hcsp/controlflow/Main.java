@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
-    //    System.out.println(isSymmetric("1234"));
+
         System.out.println(isSymmetric("1234321"));
     }
 
@@ -19,10 +19,10 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-       StringBuilder oldStr =new StringBuilder(str);
-       String newStr = oldStr.reverse().toString();
-       return str.equals(newStr);
+        StringBuilder oldStr = new StringBuilder(str);
+        String newStr = oldStr.reverse().toString();
+        return str.equals(newStr);
 
-        }
     }
+}
 
