@@ -17,6 +17,9 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
+        if(str == null || str.length() == 0){
+            return true;
+        }
         char[] chars = str.toCharArray();
         int mid = (chars.length - 1) >> 1;
         Stack<Character> stack = new Stack<>();
