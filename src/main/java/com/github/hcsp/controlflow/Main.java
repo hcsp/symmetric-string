@@ -1,6 +1,6 @@
 package com.github.hcsp.controlflow;
 
-import java.util.Stack;
+// import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-        if(str == null || str.length() == 0){
+        /*if(str == null || str.length() == 0){
             return true;
         }
         char[] chars = str.toCharArray();
@@ -34,6 +34,9 @@ public class Main {
             }
             i++;
         }
-        return true;
+        return true;*/
+
+        return new StringBuilder(str).reverse().toString().equals(str);
+
     }
 }
