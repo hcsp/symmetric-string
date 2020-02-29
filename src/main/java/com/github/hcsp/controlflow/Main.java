@@ -1,5 +1,7 @@
 package com.github.hcsp.controlflow;
 
+import java.util.Stack;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(isSymmetric("1234"));
@@ -14,5 +16,21 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {}
+    public static boolean isSymmetric(String str) {
+        char[] chars = str.toCharArray();
+        int mid = (chars.length - 1) >> 1;
+        Stack<Character> stack = new Stack<>();
+        int i = 0;
+        for (; i < mid; i++) {
+            stack.push(chars[i]);
+        }
+        i++;
+        while (!stack.isEmpty()) {
+            if (stack.pop() != chars[i]) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
 }
