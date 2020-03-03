@@ -15,10 +15,6 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-        if (str.length() % 2 == 0) {
-            System.out.println(str + "不是对称字符串");
-            return false;
-        } else {
             for (int i = 0; i < str.length() / 2; i++) {
                 if (str.charAt(i) != str.charAt((str.length() - 1) - i)) {
                     System.out.println(str + "不是对称字符串");
@@ -29,6 +25,6 @@ public class Main {
                 return true;
             }
         }
-    }
+
 
 
