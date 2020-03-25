@@ -18,14 +18,14 @@ public class Main {
      */
     public static boolean isSymmetric(String str) {
 
-        char a[]=str.toCharArray();
+        char a[] = str.toCharArray();
         StringBuilder reverse = new StringBuilder();
         for (int i = a.length - 1; i >= 0; i--)
             reverse.append(a[i]);
 
         return Objects.equals(reverse.toString(), str);
 
-}
+    }
 
 
 }
