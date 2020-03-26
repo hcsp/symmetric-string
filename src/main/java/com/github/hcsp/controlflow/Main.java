@@ -22,10 +22,7 @@ public class Main {
             chars[x] = chars[y];
             chars[y] = temp;
         }
-        if (str.equals(new String(chars))) {
-            return true;
-        }
-        return false;
+        return str.equals(new String(chars));
 
     }
 }
