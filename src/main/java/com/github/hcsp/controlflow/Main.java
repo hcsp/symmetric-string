@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(isSymmetric("1234"));
         System.out.println(isSymmetric("1234321"));
+        System.out.println(isSymmetric("上海自来水来自海上"));
     }
 
     /**
@@ -15,8 +16,9 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-        for(int i=0;i<str.length();i++){
-            if(str.charAt(i) != str.charAt(str.length()-1-i))
+        char[] c = str.toCharArray();
+        for(int i=0;i<str.length()/2;i++){
+            if(c[i] != c[str.length()-i-1])
                 return false;
         }
         return true;
