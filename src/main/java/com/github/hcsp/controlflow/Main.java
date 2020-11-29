@@ -16,8 +16,9 @@ public class Main {
      */
     public static boolean isSymmetric(String str) {
         //得到中间位置前的一个数
-        int middle_before = str.length() / 2;
-        for (int i = 0; i <= middle_before; i++) {
+        int middleBefore = str.length() / 2;
+        //
+        for (int i = 0; i <= middleBefore; i++) {
             if (str.charAt(i) != str.charAt(str.length() - i - 1)) {
                 return false;
             }
