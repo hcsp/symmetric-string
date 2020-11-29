@@ -15,25 +15,14 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-        //str为偶数的情况
-        if (str.length() % 2 == 0) {
-            int j = 0;
-            for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) == str.charAt(str.length() - 1)) {
-                    j++;
-                }
+        //得到中间位置前的一个数
+        int middle_before = str.length() / 2;
+        //
+        for (int i = 0; i <= middle_before; i++) {
+            if (str.charAt(i) != str.charAt(str.length() - i - 1)) {
+                return false;
             }
-            return j == (str.length() / 2);
-            //str为奇数的情况
-        } else {
-            int j = 0;
-            for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) == str.charAt(str.length() - 1)) {
-                    j++;
-                }
-            }
-            return j == (str.length() / 2 - 1);
         }
-
+        return true;
     }
 }
