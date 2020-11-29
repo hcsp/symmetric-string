@@ -14,15 +14,5 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {
-        //得到中间位置前的一个数
-        int middle_before = str.length() / 2;
-        //
-        for (int i = 0; i <= middle_before; i++) {
-            if (str.charAt(i) != str.charAt(str.length() - i - 1)) {
-                return false;
-            }
-        }
-        return true;
-    }
+    public static boolean isSymmetric(String str) {}
 }
