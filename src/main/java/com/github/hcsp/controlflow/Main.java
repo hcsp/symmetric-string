@@ -19,26 +19,26 @@ public class Main {
         if (str.length() % 2 == 0) {
             int j = 0;
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) == str.charAt(str.length()-1)) {
+                if (str.charAt(i) == str.charAt(str.length() - 1)) {
                     j++;
                 }
             }
-            if (j==str.length()/2){
+            if (j == str.length() / 2) {
                 return true;
-            }else {
+            } else {
                 return false;
             }
-        //str为奇数的情况
+            //str为奇数的情况
         } else {
             int j = 0;
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) == str.charAt(str.length()-1)) {
+                if (str.charAt(i) == str.charAt(str.length() - 1)) {
                     j++;
                 }
             }
-            if (j==str.length()/2-1){
+            if (j == str.length() / 2 - 1) {
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }
