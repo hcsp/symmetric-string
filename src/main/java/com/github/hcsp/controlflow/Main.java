@@ -23,11 +23,7 @@ public class Main {
                     j++;
                 }
             }
-            if (j == str.length() / 2) {
-                return true;
-            } else {
-                return false;
-            }
+            return j == (str.length() / 2);
             //str为奇数的情况
         } else {
             int j = 0;
@@ -36,11 +32,7 @@ public class Main {
                     j++;
                 }
             }
-            if (j == str.length() / 2 - 1) {
-                return true;
-            } else {
-                return false;
-            }
+            return j == (str.length() / 2 - 1);
         }
 
     }
