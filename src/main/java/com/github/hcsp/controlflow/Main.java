@@ -16,7 +16,7 @@ public class Main {
      */
     public static boolean isSymmetric(String str) {
         int l = str.length();
-        for (int i = 0; i < 1 + l / 2; i++) {
+        for (int i = 0; i <  l / 2; i++) {
             if (str.charAt(i) != str.charAt(l - 1 - i)) {
                 return false;
             }
