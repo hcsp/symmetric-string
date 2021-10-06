@@ -14,20 +14,5 @@ public class Main {
      * @param str 给定的字符串
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
-    public static boolean isSymmetric(String str) {
-        int strLength = str.length();
-        boolean flag = true;
-        if(strLength % 2 != 0){
-            return false;
-        }
-        for (int i = 0; i < (strLength) / 2; i++) {
-            System.out.println("str.charAt(i) = " + str.charAt(i));
-            System.out.println("str.charAt(i) = " + str.charAt(strLength - i - 1));
-            if(str.charAt(i) != str.charAt(strLength - i - 1)){
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-    }
+    public static boolean isSymmetric(String str) {}
 }
