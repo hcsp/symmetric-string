@@ -16,14 +16,11 @@ public class Main {
      */
     public static boolean isSymmetric(String str) {
         int length = str.length();
-        if (length % 2 == 0 || length < 3) return false;
         boolean result = true;
-        for (int i = 0; i <= ((length - 1) / 2) - 1; i++) {
-            char leftChar = str.charAt(i);
-            char rightChar = str.charAt(str.length() - 1 - i);
-            System.out.println(leftChar + "," + rightChar);
-            if (leftChar != rightChar) {
+        for (int i = 0; i <= length / 2 - 1; i++) {
+            if (str.charAt(i) != str.charAt(length - 1 - i)) {
                 result = false;
+                break;
             }
         }
         return result;
