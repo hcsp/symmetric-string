@@ -22,6 +22,7 @@ public class Main {
             if (str.charAt(s) != str.charAt(m-s-1)) {
                 return false;
             }
+
         }
         return true;
     }
