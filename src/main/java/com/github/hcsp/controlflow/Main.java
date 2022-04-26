@@ -18,13 +18,8 @@ public class Main {
 
         StringBuffer sb = new StringBuffer(str);
         String str2 = sb.reverse().toString();
-        for (int i = 0; i < str.length(); i++) {
-            if (str2.charAt(i) == str.charAt(i)) {
+        return str.equals(str2);
 
-                return true;
-            }
 
-        }
-        return false;
     }
 }
