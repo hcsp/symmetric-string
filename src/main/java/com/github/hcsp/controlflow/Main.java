@@ -15,19 +15,11 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-        char[] charArray = str.toCharArray();
-        if (charArray.length % 2 == 0) {
-            return false;
-        } else {
-            int x = 0;
-            for (int i = 0; i < charArray.length / 2; i++) {
-                if (charArray[i] == charArray[charArray.length - (i + 1)]) {
-                    x++;
-                }
-            }
-            if (x == charArray.length / 2) {
-                return true;
-            } else return false;
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = str.length() - 1; i >= 0; i--) {
+            stringBuilder.append(str.charAt(i));
         }
+        String text=stringBuilder.toString();
+        return text.equals(str);
     }
 }
